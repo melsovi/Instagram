@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/im_profile_user_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@drawable/profile_user_img" />
+
+    <TextView
+        android:id="@+id/user_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="karennne liked your photo. 1h"
+        android:textColor="@color/black"
+        android:layout_marginStart="10dp"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+    <ImageView
+        android:id="@+id/img_post_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_post_like"
+        android:layout_marginStart="50dp"/>
+
+</LinearLayout>
