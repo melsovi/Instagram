@@ -1,5 +1,7 @@
 package com.company.instagram.adapters;
 
+import android.annotation.SuppressLint;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
@@ -9,6 +11,7 @@ import java.util.ArrayList;
 
 public class AdapterViewPager extends FragmentStateAdapter {
     private ArrayList<Fragment> list = new ArrayList<>();
+    @SuppressLint("NotifyDataSetChanged")
     public void addFragments(Fragment fragments){
         this.list.add(fragments);
         notifyDataSetChanged();

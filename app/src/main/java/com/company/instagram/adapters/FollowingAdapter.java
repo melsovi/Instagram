@@ -1,5 +1,6 @@
 package com.company.instagram.adapters;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,7 @@ import java.util.ArrayList;
 public class FollowingAdapter extends RecyclerView.Adapter<FollowingAdapter.ViewHolder> {
     private ArrayList<FollowingModel> list = new ArrayList<>();
 
+    @SuppressLint("NotifyDataSetChanged")
     public void addItems(ArrayList<FollowingModel> list) {
         this.list.addAll(list);
         notifyDataSetChanged();

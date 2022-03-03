@@ -30,7 +30,7 @@ public class ProfileFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentProfileBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
@@ -45,11 +45,6 @@ public class ProfileFragment extends Fragment {
         adapterViewPager.addFragments(new TagsFragment());
         viewPager2.setAdapter(adapterViewPager);
 
-        new TabLayoutMediator(tabLayout, viewPager2, new TabLayoutMediator.TabConfigurationStrategy() {
-            @Override
-            public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
-                tab.setIcon(icon[position]);
-            }
-        }).attach();
+        new TabLayoutMediator(tabLayout, viewPager2, (tab, position) -> tab.setIcon(icon[position])).attach();
     }
 }

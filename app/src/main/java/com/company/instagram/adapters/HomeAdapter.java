@@ -1,5 +1,6 @@
 package com.company.instagram.adapters;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,7 @@ import java.util.ArrayList;
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
     private ArrayList<HomePageModel> list = new ArrayList<>();
 
+    @SuppressLint("NotifyDataSetChanged")
     public void addItems(ArrayList<HomePageModel> list) {
         this.list.addAll(list);
         notifyDataSetChanged();
